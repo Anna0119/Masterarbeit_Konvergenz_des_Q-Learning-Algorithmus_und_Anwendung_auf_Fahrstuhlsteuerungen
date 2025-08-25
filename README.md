@@ -10,28 +10,28 @@ Dieses Programm formuliert die Zustands-Klasse, die Aufzugs-Klasse und die Klass
 Für vergleichbare Ergebnisse, wurde eine analoge Formulierung für alle anderen Programme verwendet.
 
 Das Programm implementiert den Q-Learning-Algorithmus, wie er in der Masterarbeit in Algorithmus 1 dargestellt ist.
-Dabei wird in jedem Schritt die Q-Funktion vollständig aktualisiert.
+Dabei wird in jedem Schritt die Approximationsfunktion vollständig aktualisiert.
 
 Das System wurde unter Berücksichtigungen der Voraussetzungen des Konvergenztheorems modelliert.
 
 Präsentiert wird:
-* Die Konvergenz der Q-Funktion, da der euklidische Abstand zwischen aufeinanderfolgenden Q-Funktionen gegen 0 konvergiert
+* Die Konvergenz der Approximationsfunktion, da der euklidische Abstand zwischen aufeinanderfolgenden Approximationsfunktionen gegen 0 konvergiert
 * Die Ergebnisse der erzeugten Strategie (mittels der benötigten Schrittanzahl); Boxplot und Histogramm
 * Die Dauer des Trainings
 
 ### Fahrstuhlsteuerung_Vergleich_Parametersensitivität_lambda.py :
 
-Dieses Programm vergleicht den Einfluss verschiedener Ankunftsraten auf die Konvergenz der Q-Funktion und damit des Q-Learning-Algorithmus.
+Dieses Programm vergleicht den Einfluss verschiedener Ankunftsraten auf die Konvergenz der Approximationsfunktion und damit des Q-Learning-Algorithmus.
 
 Dazu werden drei verschiedene Q-Learning-Agenten mit unterschiedlichen Ankunftsraten trainiert und verglichen.
 
 Verglichen wird:
-* Die Konvergenz der Q-Funktionen aller drei Agenten
+* Die Konvergenz der Approximationsfunktionen aller drei Agenten
 * Die Güte der Strategien (mittels Schrittanzahlen)
 
 ### Fahrstuhlsteuerung_Vergleich_unterschiedlicher_Trainingsdauer.py :
 
-Dieses Programm beschäftigt sich mit der Entwicklung der Güte der Strategie während die Q-Funktion konvergiert.
+Dieses Programm beschäftigt sich mit der Entwicklung der Güte der Strategie während die Approximationsfunktion konvergiert.
 
 Dazu wird der Algorithmus nach unterschiedlich langem Training pausiert. Zunächst werden 100 Test-Simulationen durchgeführt, um zu überprüfen, wie viele improper Strategien verwendet werden. Anschließend wird die Anzahl der Schritte gemessen, die die jeweils aktuelle Strategie benötigt, um 100 Passagiere zu transportieren.
 
@@ -42,11 +42,11 @@ Ausgegeben wird:
 
 ### Fahrstuhlsteuerung_Q-Learning_Praxis.py :
 
-Dieses Programm konzentriert sich auf die Darstellung eines Q-Learning-Algorithmus, der in jeder Iteration lediglich einen Q-Wert anstelle der ganzen Q-Funktion aktualisiert.
+Dieses Programm konzentriert sich auf die Darstellung eines Q-Learning-Algorithmus, der in jeder Iteration lediglich einen Q-Wert anstelle der ganzen Approximationsfunktion aktualisiert.
 
 Dieser dient dem Vergleich zum ersten Algorithmus.
 
 Präsentiert wird:
 * Die Trainingsdauer, die dieser Algorithmus vergleichsweise benötigt.
-* Die Konvergenz der Q-Funktion mittels euklidischer Distanz (hier nach der gleichen Anzahl Schritten, die im ersten Algorithmus in einer Iteration durchgeführt werden)
+* Die Konvergenz der Approximationsfunktion mittels euklidischer Distanz (hier nach der gleichen Anzahl Schritten, die im ersten Algorithmus in einer Iteration durchgeführt werden)
 * Die Ergebnisse der erzeugten Strategie (mittels der benötigten Schrittanzahl); Boxplot und Histogramm
