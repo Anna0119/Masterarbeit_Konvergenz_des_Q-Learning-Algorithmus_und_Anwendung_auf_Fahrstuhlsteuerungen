@@ -252,7 +252,7 @@ global_delta = []
 
 # Legt fest, wann das Training abgeschlossen wird
 continue_simulation = True
-epsilon = 0.001 # 0.00005
+epsilon = 0.001 
 
 while continue_simulation == True:
     agent.update_count += 1  # Wichtig für die Definition der Lernrate
