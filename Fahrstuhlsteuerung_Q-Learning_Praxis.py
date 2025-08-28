@@ -253,7 +253,7 @@ global_delta = []
 
 continue_simulation_2 = True
 epsilon = 0.001
-epsilon_greedy = 0.05
+epsilon_greedy = 0.01
 k,j =0,0
 distance = 1
 
@@ -281,8 +281,7 @@ while continue_simulation_2 == True:
     while continue_simulation == True:
         i += 1
         j += 1
-        # epsilon_greedy = 0.05/j
-        # this_state = state.return_state()
+        epsilon_greedy = 0.01/j
         this_state = {'call_requests: ': copy.deepcopy(state.call_requests), 'elevator_position: ': copy.deepcopy(state.elevator.position), 'elevator_target: ': copy.deepcopy(state.elevator.target)}
         action = choose_action(state, agent, epsilon_greedy)
         cost, time_new = state.step_to_target(action, time)
@@ -309,7 +308,6 @@ while continue_simulation_2 == True:
     # Abbruchbedingung
     if distance < epsilon:
         continue_simulation_2 = False
-    print(distance)
 
     # print(k)
 
